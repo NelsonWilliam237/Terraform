@@ -20,13 +20,3 @@ resource "aws_instance" "micro" {
         Name = "terraform-ec2-micro"
     }
 }
-
-output "instance_id" {
-    value       = aws_instance.micro.id
-    description = "The ID of the EC2 instance"
-}
-
-output "public_ip" {
-    value       = aws_instance.micro.public_ip
-    description = "The public IP address of the instance"
-}

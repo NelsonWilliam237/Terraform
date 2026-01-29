@@ -149,7 +149,7 @@ resource "aws_route_table" "private" {
   tags = {
     Name    = "cloud-${var.student_number}-private-rt"
     Type    = "Private"
-    Project = "INF1097"
+    Project = "Aws_infrastructure"
   }
 }
 

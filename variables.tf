@@ -50,7 +50,7 @@ variable "subnet_private_apps_cidr" {
 variable "instance_type" {
   description = "Type d'instance EC2"
   type        = string
-  default     = "t2.micro"
+  default     = "t3.micro"
 }
 
 variable "my_ip" {
@@ -78,16 +78,15 @@ variable "environment" {
 variable "project_name" {
   description = "Nom du projet"
   type        = string
-  default     = "INF1097"
+  default     = "Aws_infrastructure"
 }
 
 variable "common_tags" {
   description = "Tags communs à appliquer à toutes les ressources"
   type        = map(string)
   default = {
-    Project     = "INF1097"
+    Project     = "Aws_infrastructure"
     ManagedBy   = "Terraform"
-    Institution = "Collège Boréal"
-    Course      = "Réseautique III"
+    
   }
 }

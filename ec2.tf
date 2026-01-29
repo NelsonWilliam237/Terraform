@@ -33,7 +33,7 @@ resource "aws_security_group" "web_server" {
 
   tags = {
     Name    = "Web-Server-SG"
-    Project = "INF1097"
+    Project = "Aws_infrastructure"
   }
 }
 
@@ -117,11 +117,10 @@ resource "aws_instance" "web_server" {
               </head>
               <body>
                   <div class="container">
-                      <h1>🎓 Collège Boréal</h1>
-                      <h2>INF1097 - Réseautique III</h2>
+                      <h1>Aws_infrastructure</h1>
                       <p>Serveur Web déployé avec Terraform Cloud</p>
                       <div class="info">
-                          <p><strong>Projet:</strong> AWS Travail Pratique - Groupe 3</p>
+                          <p><strong>Projet:</strong> AWS Travail Training</p>
                           <p><strong>Instance ID:</strong> $(ec2-metadata --instance-id | cut -d " " -f 2)</p>
                           <p><strong>Availability Zone:</strong> $(ec2-metadata --availability-zone | cut -d " " -f 2)</p>
                           <p><strong>Hostname:</strong> $(hostname)</p>
@@ -158,7 +157,7 @@ resource "aws_instance" "web_server" {
   tags = {
     Name        = "cloud-${var.student_number}-web-server"
     Environment = "Training"
-    Project     = "INF1097"
+    Project     = "Aws_infrastructure"
     Type        = "WebServer"
   }
 
@@ -173,7 +172,7 @@ resource "aws_eip" "web_server" {
 
   tags = {
     Name    = "cloud-${var.student_number}-web-eip"
-    Project = "INF1097"
+    Project = "Aws_infrastructure"
   }
 
   depends_on = [aws_internet_gateway.main]
